@@ -1,0 +1,19 @@
+{
+  "name": "destiny_calculor",
+  "version": "1.0.0",
+  "authors": [
+    "Ryland Dean <ryland@fenix-solutions.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "*",
+    "jquery-validation": "~1.14.0"
+  }
+}
