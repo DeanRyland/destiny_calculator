@@ -1,7 +1,7 @@
 <?php
-require_once('constant.php');
-require_once("api.php");
-require_once("util.php");
+include_once('constant.php');
+include_once("api.php");
+include_once("util.php");
 
 $loginInfo = array("platform", "gamertag");
 
@@ -39,16 +39,16 @@ $charactersArray = array(
 
 //Loop through Account Summary to grab Character Info
 foreach($curlAccountSumReturn->Response->data->characters as $character){
-	
+
 	$characterArr = array();
 
 	$characterArr['charLevel'] = $character->characterLevel;
-	
+
 	$characterArr['characterId'] = $character->characterBase->characterId;
 
 	//Loop through CharacterID to grab Character Summary
 	foreach($charactersArray['characters'] as &$characterArray){
-		
+
 		//Build Character Summary URL array
 		$charSumRequestData = array($platform, 'Account', $memID, 'Character', $characterArray['characterId']);
 
@@ -73,7 +73,7 @@ foreach($curlAccountSumReturn->Response->data->characters as $character){
 
 			//call the ItemInventory manifest for the inventory hash id
 			$itemInfo = curl(array('Manifest', 'InventoryItem', $equipment->itemHash));
-			
+
 			//Add it to our item data holder
 			$items[] = $itemInfo;
 		}
@@ -91,7 +91,7 @@ foreach($curlAccountSumReturn->Response->data->characters as $character){
 
 	$characterArr['charBg'] = $character->backgroundPath;
 
-	$charactersArray['characters'][] = $characterArr; 
+	$charactersArray['characters'][] = $characterArr;
 }
 
 //$charSum = array('CharacterID'=>$characterID, 'CharacterLightLevel'=>$charlightLevel, 'CharacterClass'=>$charClass, 'CharacterEmblem'=>$charEmblem, 'CharacterBackground'=>$charBg);

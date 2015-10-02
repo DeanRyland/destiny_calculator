@@ -1,3 +1,6 @@
+<?php
+  include_once('constant.php');
+?>
 <!DOCTYPE HTML5>
 <html lang="en">
   <head>
@@ -8,10 +11,10 @@
     <title>Destiny Light Calculator</title>
 
     <!-- Bootstrap -->
-    <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo BASE_URL;?>bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- SCSS Styles -->
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="<?php echo BASE_URL;?>css/styles.css" rel="stylesheet">
 
   </head>
   <body>
@@ -50,7 +53,7 @@
               <span id="gamerTagName"></span>
             </div>
 
-            
+
 
           </div>
         </div>
@@ -61,9 +64,9 @@
           <div class="numText alert alert-danger" role="alert"></div>
           <div class="negText alert alert-danger" role="alert"></div>
           <fieldset>
-            
+
             <h2>Weapons</h2>
-            
+
             <div class="form-group col-md-12">
               <div class="input-primary col-md-6">
                 <label class="formLabel col-md-12" for="primary">Primary Weapon</label>
@@ -77,7 +80,7 @@
                 <input class="weaponInput form-control" type="text" name="special" placeholder="999" maxlength="3" required>
               </div>
             </div>
-            
+
             <div class="form-group col-md-12">
               <div class="input-primary col-md-6">
                 <label class="formLabel col-md-12" for="heavy">Heavy Weapon</label>
@@ -86,9 +89,9 @@
             </div>
 
           </fieldset>
-          
+
           <fieldset>
-            
+
             <h2>Ghost</h2>
             <div class="form-group col-md-12">
               <div class="input-primary col-md-6">
@@ -96,11 +99,11 @@
                 <input class="ghostInput form-control" type="text" name="ghost" placeholder="999" maxlength="3" required>
               </div>
             </div>
-          
+
           </fieldset>
-          
+
           <fieldset>
-          
+
           <h2>Armour</h2>
             <div class="form-group col-md-12">
               <div class="input-primary col-md-6">
@@ -115,7 +118,7 @@
                 <input class="armourInput form-control" type="text" name="gauntlets" placeholder="999" maxlength="3" required>
               </div>
             </div>
-            
+
             <div class="form-group col-md-12">
               <div class="input-primary col-md-6">
                 <label class="formLabel col-md-12" for="chest">Chest</label>
@@ -135,7 +138,7 @@
                 <label class="formLabel col-md-12" for="classItem">Class Item</label>
                 <input class="armourInput form-control" type="text" name="classItem" placeholder="999" maxlength="3" required>
               </div>
-            </div> 
+            </div>
 
             <div class="form-group col-md-12">
               <div class="input-primary col-md-6">
@@ -160,13 +163,13 @@
             <span id="lightLevelValue"><h3></h3></span>
       </div>
     </div>
-    
+
   </body>
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>-->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="<?php echo BASE_URL;?>bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="<?php echo BASE_URL;?>bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="<?php echo BASE_URL;?>bower_components/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="<?php echo BASE_URL;?>js/script.js"></script>
 </html>

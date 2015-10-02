@@ -1,5 +1,10 @@
 <?php
 
+	error_reporting(E_ALL);
+	ini_set("display_errors", true);
+
+define("BASE_URL", "http://destiny-calculator.localdev/");
+
 $classHashesToString = array(
 	'671679327' => "Hunter",
 	'3655393761' => "Titan",
