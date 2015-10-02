@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300); //Roboto Font Style
+@import 'font'; //Font Styles
+@import 'form'; //Form Styles
+@import 'login'; //Login Styles
+@import 'character'; //Character Styles
+
+body {
+	background: url(../images/footer_lodyas.png);
+	padding-bottom: 60px;
+	position: relative;
+}
+
+.pageContainer {
+	background: #FFF;
+}
+
+// Style bootstrap default alert
+.alert {
+	margin-bottom: 0;
+}
+
+// Light level overlay styles
+#outputLevel {
+	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background-color: rgba(0,0,0,0.8); /*dim the background*/
+	display: none;
+
+	.centered {
+		margin: 0 auto;
+		padding-top: 20%;
+		width: 280px;
+
+		.lightIcon {
+			float: left;
+			padding-top: 32px;
+		}
+
+		.lightLevelText, #lightLevelValue h3 {
+			color: #F5DC56;
+			font-size: 6em;
+		}
+	}
+}
