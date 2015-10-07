@@ -3,7 +3,7 @@
 	error_reporting(E_ALL);
 	ini_set("display_errors", true);
 
-define("BASE_URL", "http://destiny-calculator.localdev/");
+define("BASE_URL", "http://ryland.dev.fenix.solutions/destiny_calculator/www/");
 
 $classHashesToString = array(
 	'671679327' => "Hunter",

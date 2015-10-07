@@ -53,8 +53,6 @@
               <span id="gamerTagName"></span>
             </div>
 
-
-
           </div>
         </div>
 
@@ -63,14 +61,15 @@
           <div class="charText alert alert-danger" role="alert"></div>
           <div class="numText alert alert-danger" role="alert"></div>
           <div class="negText alert alert-danger" role="alert"></div>
-          <fieldset>
-
-            <h2>Weapons</h2>
+          
+          <fieldset class="col-md-6">
 
             <div class="form-group col-md-12">
               <div class="input-primary col-md-6">
                 <label class="formLabel col-md-12" for="primary">Primary Weapon</label>
                 <input class="weaponInput form-control" type="text" name="primary" placeholder="999" maxlength="3" required>
+                <div class="itemName"></div>
+                <div class="itemIcon"></div>
               </div>
             </div>
 
@@ -88,11 +87,6 @@
               </div>
             </div>
 
-          </fieldset>
-
-          <fieldset>
-
-            <h2>Ghost</h2>
             <div class="form-group col-md-12">
               <div class="input-primary col-md-6">
                 <label class="formLabel col-md-12" for="ghost">Ghost (Level 40)</label>
@@ -102,9 +96,8 @@
 
           </fieldset>
 
-          <fieldset>
+          <fieldset class="col-md-6">
 
-          <h2>Armour</h2>
             <div class="form-group col-md-12">
               <div class="input-primary col-md-6">
                 <label class="formLabel col-md-12" for="helmet">Helmet</label>
@@ -147,12 +140,13 @@
               </div>
             </div>
 
-          </fieldset>
-
           <div class="form-group col-md-12">
             <input class="formSubmit btn" type="submit" value="Submit">
             <input class="formClear btn" type="button" value="clear">
           </div>
+
+          </fieldset>
+
         </form>
       </div>
 

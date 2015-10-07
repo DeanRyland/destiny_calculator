@@ -2,6 +2,9 @@
 include_once('constant.php');
 include_once("api.php");
 include_once("util.php");
+include_once("database.php");
+
+include_once("classes/itemsClass.php");
 
 $loginInfo = array("platform", "gamertag");
 
@@ -64,21 +67,29 @@ foreach($curlAccountSumReturn->Response->data->characters as $character){
 		//for equipment in my equipment list... get the item hash from bungie
 		foreach($equipmentList as $equipment){
 
-			//check equipment id in localo database
+			//check equipment id in local database
 			//if not existing
 				//call bungie
 				//get item
 				//store in database
 
-
 			//call the ItemInventory manifest for the inventory hash id
 			$itemInfo = curl(array('Manifest', 'InventoryItem', $equipment->itemHash));
 
 			//Add it to our item data holder
-			$items[] = $itemInfo;
+			//$items[$itemHashId] = $itemInfo;
+
+			foreach($itemInfo as $item){
+				//$charactersArray['items']["itemHash"] = $item->Response->data->inventoryItem->itemHash;
+				if($tmpItem = new Item($item)){
+					$items[] = json_encode(get_object_vars($tmpItem));
+				}
+			}
 		}
 
-		$characterArray['items'] = $items;
+		$charactersArray['items'] = $items;
+
+		//$characterArray['items']['charPrimary'] = $character->items->['1']->Response->data->inventoryItem->
 	}
 
 		//manfiest /

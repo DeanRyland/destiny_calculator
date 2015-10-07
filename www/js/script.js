@@ -45,7 +45,7 @@ $(document).ready(function () {
 		.done(function( data ) {
 		  	//alert( "Data Saved: " + msg );
 		  	//parseData = $.parseJSON(msg);
-		  	console.log(data);
+		  	//console.log(data);
 		  	
 		  	//TURN BACK ON!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 		  	updateLogin(data);
@@ -145,6 +145,8 @@ $(document).ready(function () {
 		  	//alert( "Data Saved: " + msg );
 		  	//loginData = JSON.parse(msg);
 
+		  	//console.log(data['items']);
+
 		  	var platformType = data['platformType'];
 		  	$('#platformIcon').append('<img src="images/' + platformType + '.png" />');
 
@@ -163,6 +165,9 @@ $(document).ready(function () {
 				//console.log(characterArr['character']);
 				//populate the html partial
 				var characterHtml = partialHtml;
+
+				console.log(data["items"]);
+
 				characterHtml = characterHtml
 					.replace('{{emblem}}', characterArr['charEmblem'])
 					.replace('{{class}}', characterArr['charClass'])
@@ -172,7 +177,7 @@ $(document).ready(function () {
 				$("#charWrapper").append(characterHtml);
 	  			//append it to the chracter wrapper
 
-			});		  		
+			});	
 		});
 	}
 });
